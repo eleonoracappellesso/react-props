@@ -5,7 +5,7 @@ function MainComponent() {
     return (
         <main className="container d-flex justify-content-center flex-wrap align-items-center">
             {posts.map((post) => (
-                <CardComponent key={post.id} post={post} />
+                post.published ? <CardComponent key={post.id} post={post} /> : null
             ))}
         </main>)
 }
